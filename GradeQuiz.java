@@ -4,15 +4,15 @@ public class GradeQuiz
 {
   private int[] key;
   private int[] studentAnswers;
-  private int arraySize;
+  private int quizSize;
 
   public GradeQuiz()
   {
     Scanner input = new Scanner(System.in);
     System.out.println("How many questions are in the quiz?");
-    arraySize = input.nextInt();
-    key = new int[arraySize];
-    studentAnswers = new int[arraySize];
+    quizSize = input.nextInt();
+    key = new int[quizSize];
+    studentAnswers = new int[quizSize];
   }
 
   public void enterKey()
@@ -29,7 +29,7 @@ public class GradeQuiz
   public void enterStudentAnswers()
   {
     Scanner input2 = new Scanner(System.in);
-    System.out.println("Please enter the answers from your student.");
+    System.out.println("Please enter the answers from your student, separated by spaces.");
     String inputAnswers[] = input2.nextLine().split(" ");
     for (int i = 0; i < inputAnswers.length; i++)
     {
@@ -40,15 +40,15 @@ public class GradeQuiz
   public void checkAnswers()
   {
     int numCorrect = 0;
-    for (int i = 0; i < arraySize; i++)
+    for (int i = 0; i < quizSize; i++)
     {
       if (key[i] == studentAnswers[i])
       {
         numCorrect++;
       }
     }
-    System.out.println("The number of correct student answers was " + numCorrect);
-    System.out.println("The percentage of correct questions was " + ((double)numCorrect / (double)arraySize) * 100 + "%.");
+    System.out.println("The number of correct student answers was " + numCorrect + "/" + quizSize + ".");
+    System.out.println("The percentage of correct questions was " + ((double)numCorrect / (double)quizSize) * 100 + "%.");
   }
 
   public void loopMethod()
