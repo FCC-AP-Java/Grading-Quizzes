@@ -22,7 +22,7 @@ public class GradeQuiz
     String correctKey[] = input1.nextLine().split(" ");
     for (int i = 0; i < correctKey.length; i++)
     {
-      key[i] = Integer.parseInt(correctKey[i]);
+      key[i] = Integer.valueOf(correctKey[i]);
     }
   }
 
@@ -33,7 +33,7 @@ public class GradeQuiz
     String inputAnswers[] = input2.nextLine().split(" ");
     for (int i = 0; i < inputAnswers.length; i++)
     {
-      studentAnswers[i] = Integer.parseInt(inputAnswers[i]);
+      studentAnswers[i] = Integer.valueOf(inputAnswers[i]);
     }
   }
 
