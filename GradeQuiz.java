@@ -19,7 +19,7 @@ public class GradeQuiz
   {
     Scanner input1 = new Scanner(System.in);
     System.out.println("Please enter the correct answers for the quiz, separated by spaces.");
-    String correctKey[] = input1.nextLine().split(" ");
+    String[] correctKey = input1.nextLine().split(" ");
     for (int i = 0; i < correctKey.length; i++)
     {
       key[i] = Integer.valueOf(correctKey[i]);
@@ -30,7 +30,7 @@ public class GradeQuiz
   {
     Scanner input2 = new Scanner(System.in);
     System.out.println("Please enter the answers from your student, separated by spaces.");
-    String inputAnswers[] = input2.nextLine().split(" ");
+    String[] inputAnswers = input2.nextLine().split(" ");
     for (int i = 0; i < inputAnswers.length; i++)
     {
       studentAnswers[i] = Integer.valueOf(inputAnswers[i]);
